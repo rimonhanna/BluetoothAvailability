@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OoB-nC-s89">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Waq-yT-kNz">
+            <objects>
+                <navigationController id="OoB-nC-s89" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CNC-bT-hUD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="A2U-ZL-gKJ" kind="relationship" relationship="rootViewController" id="Ofj-RF-rop"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YrG-cM-obt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1163" y="-518"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Nbz-BM-d8J">
+            <objects>
+                <viewController id="A2U-ZL-gKJ" customClass="MainViewController" customModule="BluetoothAvailability" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FwJ-7L-Dhe"/>
+                        <viewControllerLayoutGuide type="bottom" id="oI3-gh-u2L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="abk-IY-ie2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7M-C6-FPT" customClass="AvailabilityView" customModule="BluetoothAvailability" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="622" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="5Qi-cL-d4p"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A7M-C6-FPT" firstAttribute="leading" secondItem="abk-IY-ie2" secondAttribute="leading" id="HId-qG-T8X"/>
+                            <constraint firstItem="oI3-gh-u2L" firstAttribute="top" secondItem="A7M-C6-FPT" secondAttribute="bottom" id="Ytw-c4-Nho"/>
+                            <constraint firstAttribute="trailing" secondItem="A7M-C6-FPT" secondAttribute="trailing" id="sYJ-2a-sfM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2dQ-E8-gdu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyY-wo-JIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183.19999999999999" y="-520.38980509745136"/>
+        </scene>
+    </scenes>
+</document>
