@@ -19,7 +19,7 @@ internal class MainViewController: UIViewController {
         return activityIndicator
     }
     
-    private let activityIndicatorBarButtonItem = UIBarButtonItem(customView: UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.white))
+    private let activityIndicatorBarButtonItem = UIBarButtonItem(customView: UIActivityIndicatorView(style: UIActivityIndicatorView.Style.white))
     
     // MARK: UIViewController Life Cycle
     override func viewDidLoad() {

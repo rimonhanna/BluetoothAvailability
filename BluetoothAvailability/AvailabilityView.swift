@@ -36,11 +36,11 @@ internal class AvailabilityView: UIView {
         let trailingText = availabilityLabelTrailingTextForAvailability(availability)
         let string = leadingText + trailingText as NSString
         let attributedString = NSMutableAttributedString(string: string as String)
-        attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont.boldSystemFont(ofSize: 14), range: NSRange(location: 0, length: string.length))
-        attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.black, range: string.range(of: leadingText))
+        attributedString.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: 14), range: NSRange(location: 0, length: string.length))
+        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.black, range: string.range(of: leadingText))
         switch availability {
-        case .available: attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.green, range: string.range(of: trailingText))
-        case .unavailable: attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red, range: string.range(of: trailingText))
+        case .available: attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.green, range: string.range(of: trailingText))
+        case .unavailable: attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: string.range(of: trailingText))
         }
         return attributedString
     }
